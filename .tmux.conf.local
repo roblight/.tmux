@@ -312,4 +312,4 @@ bind C-s setw synchronize-panes
 set -g -w allow-rename off
 set -g    mouse        on
 
-source-file /home/rwl/Sandbox/github/tmux-plugins/tmux-themepack/powerline/block/cyan.tmuxtheme
+source-file ~/Sandbox/github/tmux-themepack-roblight/powerline/block/cyan.tmuxtheme
