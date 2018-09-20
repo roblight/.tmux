@@ -86,10 +86,10 @@ tmux_conf_theme_mode_bg='#ffff00'                       # yellow
 tmux_conf_theme_mode_attr='bold'
 
 # status line style
-# tmux_conf_theme_status_fg='#8a8a8a'                     # light gray
-# tmux_conf_theme_status_bg='#080808'                     # dark gray
-tmux_conf_theme_status_fg='colour39'
-tmux_conf_theme_status_bg='colour233'
+tmux_conf_theme_status_fg='#8a8a8a'                     # light gray
+tmux_conf_theme_status_bg='#080808'                     # dark gray
+# tmux_conf_theme_status_fg='colour39'
+# tmux_conf_theme_status_bg='colour233'
 tmux_conf_theme_status_attr='none'
 
 # terminal title
@@ -110,8 +110,8 @@ tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-# tmux_conf_theme_window_status_fg='#8a8a8a'              # light gray
-# tmux_conf_theme_window_status_bg='#080808'              # dark gray
+tmux_conf_theme_window_status_fg='#8a8a8a'              # light gray
+tmux_conf_theme_window_status_bg='#080808'              # dark gray
 tmux_conf_theme_window_status_attr='none'
 tmux_conf_theme_window_status_format='#I #W'
 #tmux_conf_theme_window_status_format='#{circled_window_index} #W'
@@ -182,12 +182,8 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{username_ssh}
 # tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
 # tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
-# tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} #{?pane_synchronized,🔒 ,} '
-# tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
-# tmux_conf_theme_status_left=" #S  #(whoami)  #I:#P "
-# tmux_conf_theme_status_rght=" %H:%M:%S  %d-%b-%y  #H "
 tmux_conf_theme_status_left=' ❐ #S | 📈 #{loadavg} | 🔋#{battery_percentage}#{battery_status} '
-tmux_conf_theme_status_right='#{prefix} #{pairing} #{?pane_synchronized,🔒 ,} | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_right='#{prefix} #{pairing} #{synchronized} | #{username}#{root} | #{hostname} '
 
 # status left style
 # tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
@@ -202,7 +198,7 @@ tmux_conf_theme_status_left_attr='bold,bold,bold'
 # tmux_conf_theme_status_right_bg='#080808,#d70000,#e4e4e4' # dark gray, red, white
 # tmux_conf_theme_status_right_attr='none,none,bold'
 tmux_conf_theme_status_right_fg='red,colour233,colour232'
-tmux_conf_theme_status_right_bg='colour233,colour240,colour245'
+tmux_conf_theme_status_right_bg='colour232,colour240,colour245'
 tmux_conf_theme_status_right_attr='bold,bold,bold'
 
 # pairing indicator
@@ -218,10 +214,14 @@ tmux_conf_theme_prefix_bg='none'
 tmux_conf_theme_prefix_attr='none'
 
 # root indicator
+# tmux_conf_theme_root='!'
+# tmux_conf_theme_root_fg='none'
+# tmux_conf_theme_root_bg='none'
+# tmux_conf_theme_root_attr='bold,blink'
 tmux_conf_theme_root='!'
 tmux_conf_theme_root_fg='none'
-tmux_conf_theme_root_bg='none'
-tmux_conf_theme_root_attr='bold,blink'
+tmux_conf_theme_root_bg='red'
+tmux_conf_theme_root_attr='bold'
 
 # synchronized indicator
 tmux_conf_theme_synchronized='🔒'     # U+1F512
@@ -312,4 +312,4 @@ bind C-s setw synchronize-panes
 set -g -w allow-rename off
 set -g    mouse        on
 
-source-file ~/Sandbox/github/tmux-themepack-roblight/powerline/block/cyan.tmuxtheme
+#source-file ~/Sandbox/github/tmux-themepack-roblight/powerline/block/cyan.tmuxtheme
