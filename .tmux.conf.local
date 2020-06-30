@@ -312,4 +312,7 @@ bind C-s setw synchronize-panes
 set -g -w allow-rename off
 set -g    mouse        on
 
+bind-key -r M-< swap-window -t -1
+bind-key -r M-> swap-window -t +1
+
 #source-file ~/Sandbox/github/tmux-themepack-roblight/powerline/block/cyan.tmuxtheme
